@@ -41,5 +41,8 @@ install.packages("dplyr")
 library(dplyr)
 
 sub_data<-data%>% group_by(activity,subject)%>%summarize_each(funs(mean))
+# independt
+write.table(sub_data,file="~/Downloads/UCI HAR Dataset-2/tidydata.txt", row.names = FALSE,col.names = TRUE)
+
 
 
